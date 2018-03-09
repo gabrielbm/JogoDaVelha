@@ -1,5 +1,6 @@
 
 var vez = "x";
+var ultima;
 
 function clicado(botao) {
 	if (botao.innerText != "")
@@ -12,4 +13,15 @@ function clicado(botao) {
 		botao.innerText = "o";
 		vez = "x";
 	}
+	ultima = botao;
+}
+
+function desfazendo(refazer){
+    ultima.innerText = "";
+    
+    if(vez == "x"){
+        vez = "o"
+    } else {
+        vez = "x"
+    }
 }
